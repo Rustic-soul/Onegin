@@ -14,6 +14,16 @@ enum CONFIG{
 	REVERSE
 };
 
+enum ERROR{
+	ERROR = 1,
+	ERROR_OPEN_FILE,
+	ERROR_POINTER_NULL,
+	ERROR_READ_TEXT,
+	ERROR_UNREAL_VALUE,
+	ERROR_BORDER_MASSIVE,
+	ERROR_CLOSE_FILE
+};
+
 typedef struct DATA_TEXT{
     size_t size_file;
     char   *buf;
