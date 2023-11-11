@@ -1,39 +1,6 @@
 #include "../include/main.h"
 
-int create_buf(FILE *fp_src, Data_t* text)
-{
-	assert(fp_src != NULL);
-	assert(text != NULL);
-	assert(text->size_file > 0);
-
-	text->buf = (char *)calloc(text->size_file + 1, sizeof(char));
-	if (text->buf == NULL)
-	{
-		fprintf(stderr, "ERROR: Pointer NULL\n");
-		return ERROR_POINTER_NULL;
-	}
-	
-	assert(text->buf != NULL);
-	printf(">>Buf create norm\n");
-
-	size_t amount_char_file = fread(text->buf, sizeof(char), text->size_file, fp_src);
-	
-	printf(">>Считали [%lu] символов\n", amount_char_file);
-	assert(ferror(fp_src) == 0);
-
-	if (ferror(fp_src) != 0)
-	{
-		fprintf(stderr, "ERROR: Read from file\n");
-		return ERROR_READ_TEXT;
-	}
-	
-	text->buf[text->size_file] = '\0';
-	printf(">>Buffer заполнен\n");
-
-	return 0;
-}
-
-int search_size_file(FILE *fp_src, Data_t* text)
+size_t search_size_file(FILE *fp_src, Data_t* text, int* error_check)
 {
     assert(fp_src != NULL);
     assert(text   != NULL);
@@ -43,19 +10,52 @@ int search_size_file(FILE *fp_src, Data_t* text)
     fseek(fp_src, 0, SEEK_SET);
 
     assert(size_file > 0);
-    printf(">>Search size file:: %lu\n", size_file);
+    printf(">>Size file: [%lu]\n", size_file);
     
 	if (size_file <= 0)
 	{
 		fprintf(stderr, "ERROR: Unreal value\n");
-		return ERROR_UNREAL_VALUE;
+		*error_check = ERROR_UNREAL_VALUE;
 	}
 
 	text->size_file = size_file;
-    return 0;
+    return size_file;
 }
 
-int split_lines(Data_t *text)
+char* create_buf(FILE *fp_src, Data_t* text, int* error_check)
+{
+	assert(fp_src != NULL);
+	assert(text != NULL);
+	assert(text->size_file > 0);
+
+	char* buf = (char *)calloc(text->size_file + 1, sizeof(char));
+	if (buf == NULL)
+	{
+		fprintf(stderr, "ERROR: Pointer NULL\n");
+		*error_check = ERROR_POINTER_NULL;
+	}
+	
+	assert(buf != NULL);
+	// printf(">>Buf create norm\n");
+
+	size_t amount_char_file = fread(buf, sizeof(char), text->size_file, fp_src);
+	
+	printf(">>Characters read: [%lu]\n", amount_char_file);
+	assert(ferror(fp_src) == 0);
+
+	if (ferror(fp_src) != 0)
+	{
+		fprintf(stderr, "ERROR: Read from file\n");
+		*error_check = ERROR_READ_TEXT;
+	}
+	
+	buf[text->size_file] = '\0';
+	printf(">>Buffer is full\n");
+
+	return buf;
+}
+
+Line* split_lines(Data_t *text, int* error_check)
 {
     assert(text != NULL);
 
@@ -68,51 +68,61 @@ int split_lines(Data_t *text)
         if (text->buf[i] == '\0')
             break;
     }
-    text->amount_lines = amount_lines;
-    printf(">>Amount lines = %lu\n", amount_lines);
+    printf(">>Amount lines: [%lu]\n", amount_lines);
 
-	if (text->amount_lines <= 0)
+	if (amount_lines <= 0)
 	{
 		fprintf(stderr, "ERROR: Unreal value\n");
-		return ERROR_UNREAL_VALUE;
+		*error_check = ERROR_UNREAL_VALUE;
 	}
+	text->amount_lines = amount_lines;
 
-    text->lines = (char **)calloc(amount_lines, sizeof(char *));
-    assert(text->lines != NULL);
+    Line* lines = (Line *)calloc(amount_lines, sizeof(Line));
+    assert(lines != NULL);
 
-
-	text->lines[0] = text->buf;
-
+	lines[0].line = text->buf;
+	
+	short length_line = 0;
     for (size_t i = 0, j = 1; i < text->size_file; i++)
     {
+		length_line++;
+
         if (text->buf[i] == '\n')
         {
             text->buf[i]   = '\0'; 
-            text->lines[j] = (text->buf + i + 1);
-            j++;
+            lines[j].line = (text->buf + i + 1);
+            lines[j - 1].length_line = length_line;
+			length_line = 0;
+			j++;
         }
         else if (text->buf[i] == '\0')
+		{
+			lines[j - 1].length_line = length_line;
             break;
-		assert(j <= text->amount_lines);
-		if (j > text->amount_lines)
+		}
+		assert(j <= amount_lines);
+		if (j > amount_lines)
 		{
 			fprintf(stderr, "ERROR: Output bordered massive\n");
-			return ERROR_BORDER_MASSIVE;
+			*error_check = ERROR_BORDER_MASSIVE;
 		}
     }
     
-	printf(">>Completed create massive lines\n");
+	// printf(">>Completed create massive lines\n");
 
-    return 0;
+    return lines;
 }
 
 int compare(const void *arg1, const void *arg2)
-{
+{ 	
 	assert(arg1 != NULL);
 	assert(arg2 != NULL);
-
-	const char *str1 = *(const char **)arg1;
-	const char *str2 = *(const char **)arg2;
+	
+	const char *str1 = (*(const Line*)arg1).line;
+	const char *str2 = (*(const Line*)arg2).line;
+	
+	assert(str1 != NULL);
+	assert(str2 != NULL);
 
 	char ch1 = 'a';
 	char ch2 = 'a';
@@ -121,7 +131,7 @@ int compare(const void *arg1, const void *arg2)
 	{
 		ch1 = *(str1 + i);
 		ch2 = *(str2 + j);
-		
+
 		while ((isalpha(ch1) == 0) && (ch1 !='\0'))
 		{
 			i++;
@@ -143,7 +153,6 @@ int compare(const void *arg1, const void *arg2)
 		else
 			break;
 	}
-
 	return ch1 - ch2;
 }
 
@@ -152,17 +161,12 @@ int compare_reverse(const void* arg1, const void* arg2)
 	assert(arg1 != NULL);
 	assert(arg2 != NULL);
 
-	const char *str1 = *((const char **)arg1);
-	const char *str2 = *((const char **)arg2);
+	const char *str1 = (*(const Line*)arg1).line;
+	const char *str2 = (*(const Line*)arg2).line;
 	
-	int length_str2 = 0;
-	int length_str1 = 0; 
+	int length_str1 = (*(const Line*)arg1).length_line - 1;
+	int length_str2 = (*(const Line*)arg2).length_line - 1; 
 
-	for (int i = 0; *(str1 + i) != '\0'; i++)
-		length_str1++;
-	for (int i = 0; *(str2 + i) != '\0'; i++)
-		length_str2++;
-		
 	char ch1 = 'a';
 	char ch2 = 'a';
 
@@ -201,15 +205,15 @@ int sorted_text(Data_t* text, int config, const char* pth)
 	switch (config)
 	{
 	case NORMAL:
-		qsort(text->lines, text->amount_lines, sizeof(char *), compare);
+		qsort(text->lines, text->amount_lines, sizeof(Line), (int(*) (const void *, const void *)) compare);
 		break;
 	case REVERSE:
-		qsort(text->lines, text->amount_lines, sizeof(char *), compare_reverse);
+		qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		break;
 	default:
 		break;
 	}
-
+	
     FILE *fp_out = NULL;
 	if ((fp_out = fopen(pth, "w")) == NULL)
 	{
@@ -220,7 +224,7 @@ int sorted_text(Data_t* text, int config, const char* pth)
 
     for (size_t i = 0; i < text->amount_lines; i++)
 	{
-        fprintf(fp_out, "%s\n", text->lines[i]);
+        fprintf(fp_out, "%s\n", text->lines[i].line);
 	}
 
 	if (fclose(fp_out) != 0)
