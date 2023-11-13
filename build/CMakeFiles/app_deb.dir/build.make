@@ -83,30 +83,30 @@ CMakeFiles/app_deb.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_deb.dir/src/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/GIT/Onegin/src/main.cpp -o CMakeFiles/app_deb.dir/src/main.cpp.s
 
-CMakeFiles/app_deb.dir/src/func.cpp.o: CMakeFiles/app_deb.dir/flags.make
-CMakeFiles/app_deb.dir/src/func.cpp.o: /home/admin/GIT/Onegin/src/func.cpp
-CMakeFiles/app_deb.dir/src/func.cpp.o: CMakeFiles/app_deb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin/GIT/Onegin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app_deb.dir/src/func.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app_deb.dir/src/func.cpp.o -MF CMakeFiles/app_deb.dir/src/func.cpp.o.d -o CMakeFiles/app_deb.dir/src/func.cpp.o -c /home/admin/GIT/Onegin/src/func.cpp
+CMakeFiles/app_deb.dir/src/Onegin.cpp.o: CMakeFiles/app_deb.dir/flags.make
+CMakeFiles/app_deb.dir/src/Onegin.cpp.o: /home/admin/GIT/Onegin/src/Onegin.cpp
+CMakeFiles/app_deb.dir/src/Onegin.cpp.o: CMakeFiles/app_deb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin/GIT/Onegin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app_deb.dir/src/Onegin.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app_deb.dir/src/Onegin.cpp.o -MF CMakeFiles/app_deb.dir/src/Onegin.cpp.o.d -o CMakeFiles/app_deb.dir/src/Onegin.cpp.o -c /home/admin/GIT/Onegin/src/Onegin.cpp
 
-CMakeFiles/app_deb.dir/src/func.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_deb.dir/src/func.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/GIT/Onegin/src/func.cpp > CMakeFiles/app_deb.dir/src/func.cpp.i
+CMakeFiles/app_deb.dir/src/Onegin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_deb.dir/src/Onegin.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/GIT/Onegin/src/Onegin.cpp > CMakeFiles/app_deb.dir/src/Onegin.cpp.i
 
-CMakeFiles/app_deb.dir/src/func.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_deb.dir/src/func.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/GIT/Onegin/src/func.cpp -o CMakeFiles/app_deb.dir/src/func.cpp.s
+CMakeFiles/app_deb.dir/src/Onegin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_deb.dir/src/Onegin.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/GIT/Onegin/src/Onegin.cpp -o CMakeFiles/app_deb.dir/src/Onegin.cpp.s
 
 # Object files for target app_deb
 app_deb_OBJECTS = \
 "CMakeFiles/app_deb.dir/src/main.cpp.o" \
-"CMakeFiles/app_deb.dir/src/func.cpp.o"
+"CMakeFiles/app_deb.dir/src/Onegin.cpp.o"
 
 # External object files for target app_deb
 app_deb_EXTERNAL_OBJECTS =
 
 app_deb: CMakeFiles/app_deb.dir/src/main.cpp.o
-app_deb: CMakeFiles/app_deb.dir/src/func.cpp.o
+app_deb: CMakeFiles/app_deb.dir/src/Onegin.cpp.o
 app_deb: CMakeFiles/app_deb.dir/build.make
 app_deb: CMakeFiles/app_deb.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin/GIT/Onegin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable app_deb"

@@ -129,29 +129,29 @@ app_deb/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/build
 .PHONY : app_deb/fast
 
-src/func.o: src/func.cpp.o
-.PHONY : src/func.o
+src/Onegin.o: src/Onegin.cpp.o
+.PHONY : src/Onegin.o
 
 # target to build an object file
-src/func.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/func.cpp.o
-.PHONY : src/func.cpp.o
+src/Onegin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/Onegin.cpp.o
+.PHONY : src/Onegin.cpp.o
 
-src/func.i: src/func.cpp.i
-.PHONY : src/func.i
+src/Onegin.i: src/Onegin.cpp.i
+.PHONY : src/Onegin.i
 
 # target to preprocess a source file
-src/func.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/func.cpp.i
-.PHONY : src/func.cpp.i
+src/Onegin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/Onegin.cpp.i
+.PHONY : src/Onegin.cpp.i
 
-src/func.s: src/func.cpp.s
-.PHONY : src/func.s
+src/Onegin.s: src/Onegin.cpp.s
+.PHONY : src/Onegin.s
 
 # target to generate assembly for a file
-src/func.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/func.cpp.s
-.PHONY : src/func.cpp.s
+src/Onegin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/Onegin.cpp.s
+.PHONY : src/Onegin.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app_deb"
-	@echo "... src/func.o"
-	@echo "... src/func.i"
-	@echo "... src/func.s"
+	@echo "... src/Onegin.o"
+	@echo "... src/Onegin.i"
+	@echo "... src/Onegin.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

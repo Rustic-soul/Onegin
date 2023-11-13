@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/admin/GIT/Onegin/src/func.cpp" "CMakeFiles/app_deb.dir/src/func.cpp.o" "gcc" "CMakeFiles/app_deb.dir/src/func.cpp.o.d"
+  "/home/admin/GIT/Onegin/src/Onegin.cpp" "CMakeFiles/app_deb.dir/src/Onegin.cpp.o" "gcc" "CMakeFiles/app_deb.dir/src/Onegin.cpp.o.d"
   "/home/admin/GIT/Onegin/src/main.cpp" "CMakeFiles/app_deb.dir/src/main.cpp.o" "gcc" "CMakeFiles/app_deb.dir/src/main.cpp.o.d"
   )
 

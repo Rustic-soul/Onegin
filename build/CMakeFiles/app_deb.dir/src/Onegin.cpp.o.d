@@ -1,5 +1,5 @@
-CMakeFiles/app_deb.dir/src/main.cpp.o: \
- /home/admin/GIT/Onegin/src/main.cpp /usr/include/stdc-predef.h \
+CMakeFiles/app_deb.dir/src/Onegin.cpp.o: \
+ /home/admin/GIT/Onegin/src/Onegin.cpp /usr/include/stdc-predef.h \
  /home/admin/GIT/Onegin/src/../include/Onegin.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
@@ -38,5 +38,4 @@ CMakeFiles/app_deb.dir/src/main.cpp.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/c++/13/bits/std_abs.h \
- /usr/include/assert.h /usr/include/ctype.h \
- /home/admin/GIT/Onegin/src/../include/config.h
+ /usr/include/assert.h /usr/include/ctype.h
