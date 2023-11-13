@@ -6,8 +6,8 @@ CMakeFiles/app_deb.dir/src/Onegin.cpp.o: \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h \
- /usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h \
+ /usr/lib64/gcc/x86_64-alt-linux/13/include/stddef.h \
+ /usr/lib64/gcc/x86_64-alt-linux/13/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/types/__fpos_t.h \
  /usr/include/bits/types/__mbstate_t.h \
@@ -17,9 +17,9 @@ CMakeFiles/app_deb.dir/src/Onegin.cpp.o: \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h /usr/include/c++/13/stdlib.h \
  /usr/include/c++/13/cstdlib \
- /usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h \
- /usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h \
- /usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h \
+ /usr/include/c++/13/x86_64-alt-linux/bits/c++config.h \
+ /usr/include/c++/13/x86_64-alt-linux/bits/os_defines.h \
+ /usr/include/c++/13/x86_64-alt-linux/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \

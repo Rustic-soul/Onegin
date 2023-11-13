@@ -1,4 +1,4 @@
-#include "../include/main.h"
+#include "../include/Onegin.h"
 #include "../include/config.h"
 
 int main()
@@ -13,7 +13,7 @@ int main()
 		return ERROR_OPEN_FILE;
 	}
 	
-	text1.size_file = search_size_file(fp_src, &text1, &ERROR_CHECK);
+	text1.size_file = search_size_file(fp_src, &ERROR_CHECK);
 	if (ERROR_CHECK != 0)
 		exit(ERROR_CHECK);
 
@@ -25,7 +25,12 @@ int main()
 		exit (ERROR_CHECK);
 	}
 
-	text1.lines = split_lines(&text1, &ERROR_CHECK);
+	if ((ERROR_CHECK = determine_number_lines(text1.buf, text1.size_file, &text1.amount_lines)) != 0)
+	{
+		exit(ERROR_CHECK);
+	}
+
+	text1.lines = split_lines(text1.buf, text1.size_file, text1.amount_lines, &ERROR_CHECK);
 	if (ERROR_CHECK != 0)
 	{
 		fclose(fp_src);

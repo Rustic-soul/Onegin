@@ -33,11 +33,13 @@ enum ERROR{
 	ERROR_CLOSE_FILE     = -7
 };
 
-size_t search_size_file(FILE *fp_src, Data_t* text, int* error_check);
+size_t search_size_file(FILE *fp_src, int* error_check);
 
 char* create_buf(FILE *fp_src, Data_t* text, int* error_check);
 
-Line* split_lines(Data_t *text, int* error_check);
+int determine_number_lines(char *buf, size_t sz_buf, size_t *n_lines);
+
+Line* split_lines(char *buf, size_t sz_buf, size_t amount_lines, int* error_check);
 
 int sorted_text(Data_t* text, int config, const char* pth);
 
