@@ -1,3 +1,0 @@
-/home/admin/GIT/Onegin/build/CMakeFiles/app_deb.dir
-/home/admin/GIT/Onegin/build/CMakeFiles/edit_cache.dir
-/home/admin/GIT/Onegin/build/CMakeFiles/rebuild_cache.dir
