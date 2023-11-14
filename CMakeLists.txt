@@ -25,4 +25,4 @@ unreachable,vla-bound,vptr")
 
 include_directories(${src})
 
-add_executable(app_deb src/main.cpp src/Onegin.cpp)
+add_executable(app_deb src/main.cpp src/Onegin.cpp src/bubble_sort.cpp)

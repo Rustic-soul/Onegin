@@ -165,10 +165,12 @@ int sorted_text(Data_t* text, int config, const char* pth)
 	switch (config)
 	{
 	case NORMAL:
-		qsort(text->lines, text->amount_lines, sizeof(Line), compare);
+		bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare);
+		// qsort(text->lines, text->amount_lines, sizeof(Line), compare);
 		break;
 	case REVERSE:
-		qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
+		bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
+		// qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		break;
 	default:
 		fprintf(stderr, "ERROR: Config is not from switch case\n");
