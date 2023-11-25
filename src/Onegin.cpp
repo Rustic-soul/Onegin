@@ -165,11 +165,13 @@ int sorted_text(Data_t* text, int config, const char* pth)
 	switch (config)
 	{
 	case NORMAL:
-		bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare);
+		my_qsort(text->lines, text->amount_lines, sizeof(Line), compare);
+		// bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare);
 		// qsort(text->lines, text->amount_lines, sizeof(Line), compare);
 		break;
 	case REVERSE:
-		bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
+		my_qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
+		// bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		// qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		break;
 	default:

@@ -97,32 +97,32 @@ CMakeFiles/app_deb.dir/src/Onegin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_deb.dir/src/Onegin.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/GIT/Onegin/src/Onegin.cpp -o CMakeFiles/app_deb.dir/src/Onegin.cpp.s
 
-CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o: CMakeFiles/app_deb.dir/flags.make
-CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o: /home/admin/GIT/Onegin/src/bubble_sort.cpp
-CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o: CMakeFiles/app_deb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin/GIT/Onegin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o -MF CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o.d -o CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o -c /home/admin/GIT/Onegin/src/bubble_sort.cpp
+CMakeFiles/app_deb.dir/src/myqsort.cpp.o: CMakeFiles/app_deb.dir/flags.make
+CMakeFiles/app_deb.dir/src/myqsort.cpp.o: /home/admin/GIT/Onegin/src/myqsort.cpp
+CMakeFiles/app_deb.dir/src/myqsort.cpp.o: CMakeFiles/app_deb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/admin/GIT/Onegin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app_deb.dir/src/myqsort.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app_deb.dir/src/myqsort.cpp.o -MF CMakeFiles/app_deb.dir/src/myqsort.cpp.o.d -o CMakeFiles/app_deb.dir/src/myqsort.cpp.o -c /home/admin/GIT/Onegin/src/myqsort.cpp
 
-CMakeFiles/app_deb.dir/src/bubble_sort.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_deb.dir/src/bubble_sort.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/GIT/Onegin/src/bubble_sort.cpp > CMakeFiles/app_deb.dir/src/bubble_sort.cpp.i
+CMakeFiles/app_deb.dir/src/myqsort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_deb.dir/src/myqsort.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/GIT/Onegin/src/myqsort.cpp > CMakeFiles/app_deb.dir/src/myqsort.cpp.i
 
-CMakeFiles/app_deb.dir/src/bubble_sort.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_deb.dir/src/bubble_sort.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/GIT/Onegin/src/bubble_sort.cpp -o CMakeFiles/app_deb.dir/src/bubble_sort.cpp.s
+CMakeFiles/app_deb.dir/src/myqsort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_deb.dir/src/myqsort.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/GIT/Onegin/src/myqsort.cpp -o CMakeFiles/app_deb.dir/src/myqsort.cpp.s
 
 # Object files for target app_deb
 app_deb_OBJECTS = \
 "CMakeFiles/app_deb.dir/src/main.cpp.o" \
 "CMakeFiles/app_deb.dir/src/Onegin.cpp.o" \
-"CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o"
+"CMakeFiles/app_deb.dir/src/myqsort.cpp.o"
 
 # External object files for target app_deb
 app_deb_EXTERNAL_OBJECTS =
 
 app_deb: CMakeFiles/app_deb.dir/src/main.cpp.o
 app_deb: CMakeFiles/app_deb.dir/src/Onegin.cpp.o
-app_deb: CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o
+app_deb: CMakeFiles/app_deb.dir/src/myqsort.cpp.o
 app_deb: CMakeFiles/app_deb.dir/build.make
 app_deb: CMakeFiles/app_deb.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/admin/GIT/Onegin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable app_deb"

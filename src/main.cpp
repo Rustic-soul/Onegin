@@ -1,5 +1,6 @@
 #include "../include/Onegin.h"
 #include "../include/config.h"
+#include <ctime>
 
 int main()
 {
@@ -58,5 +59,6 @@ int main()
 	fclose(fp_src);
 	free(text1.buf);
 	free(text1.lines);
+	printf("TIME: %ld\n", clock());
 }
 

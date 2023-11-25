@@ -47,12 +47,10 @@ int compare(const void *arg1, const void *arg2);
 
 int compare_reverse(const void* arg1, const void* arg2);
 
-// 
+// void bubble_sort(void *base, size_t n_elem, size_t sz_elem, int (*compare)(const void *arg1, const void *arg2));
 
-void bubble_sort(void *base, size_t n_elem, size_t sz_elem, int (*compare)(const void *arg1, const void *arg2));
+void my_qsort(void* array, size_t sz_array, size_t sz_elem, int (*compare)(const void*, const void*));
 
 void swap(void *arg1, void* arg2, size_t sz_elem);
-
-// 
 
 #endif

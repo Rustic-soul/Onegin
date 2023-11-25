@@ -153,30 +153,6 @@ src/Onegin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/Onegin.cpp.s
 .PHONY : src/Onegin.cpp.s
 
-src/bubble_sort.o: src/bubble_sort.cpp.o
-.PHONY : src/bubble_sort.o
-
-# target to build an object file
-src/bubble_sort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o
-.PHONY : src/bubble_sort.cpp.o
-
-src/bubble_sort.i: src/bubble_sort.cpp.i
-.PHONY : src/bubble_sort.i
-
-# target to preprocess a source file
-src/bubble_sort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/bubble_sort.cpp.i
-.PHONY : src/bubble_sort.cpp.i
-
-src/bubble_sort.s: src/bubble_sort.cpp.s
-.PHONY : src/bubble_sort.s
-
-# target to generate assembly for a file
-src/bubble_sort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/bubble_sort.cpp.s
-.PHONY : src/bubble_sort.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -201,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/myqsort.o: src/myqsort.cpp.o
+.PHONY : src/myqsort.o
+
+# target to build an object file
+src/myqsort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/myqsort.cpp.o
+.PHONY : src/myqsort.cpp.o
+
+src/myqsort.i: src/myqsort.cpp.i
+.PHONY : src/myqsort.i
+
+# target to preprocess a source file
+src/myqsort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/myqsort.cpp.i
+.PHONY : src/myqsort.cpp.i
+
+src/myqsort.s: src/myqsort.cpp.s
+.PHONY : src/myqsort.s
+
+# target to generate assembly for a file
+src/myqsort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/myqsort.cpp.s
+.PHONY : src/myqsort.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +213,12 @@ help:
 	@echo "... src/Onegin.o"
 	@echo "... src/Onegin.i"
 	@echo "... src/Onegin.s"
-	@echo "... src/bubble_sort.o"
-	@echo "... src/bubble_sort.i"
-	@echo "... src/bubble_sort.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/myqsort.o"
+	@echo "... src/myqsort.i"
+	@echo "... src/myqsort.s"
 .PHONY : help
 
 
