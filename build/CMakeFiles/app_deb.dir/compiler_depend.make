@@ -206,6 +206,8 @@ CMakeFiles/app_deb.dir/src/myqsort.cpp.o: /home/admin/GIT/Onegin/src/myqsort.cpp
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
@@ -215,6 +217,8 @@ CMakeFiles/app_deb.dir/src/myqsort.cpp.o: /home/admin/GIT/Onegin/src/myqsort.cpp
 
 
 /usr/lib64/gcc/x86_64-alt-linux/13/include/stdint.h:
+
+/usr/include/strings.h:
 
 /usr/include/stdint.h:
 
@@ -259,6 +263,8 @@ CMakeFiles/app_deb.dir/src/myqsort.cpp.o: /home/admin/GIT/Onegin/src/myqsort.cpp
 /usr/include/bits/types.h:
 
 /usr/include/c++/13/x86_64-alt-linux/bits/cpu_defines.h:
+
+/usr/include/string.h:
 
 /usr/include/bits/time64.h:
 

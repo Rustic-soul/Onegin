@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
 
 void my_qsort(void* array, size_t sz_array, size_t sz_elem, int (*compare)(const void*, const void*));
 void swap(void *arg1, void* arg2, size_t sz_elem);
@@ -62,66 +63,38 @@ void my_qsort(void* array, size_t sz_array, size_t sz_elem, int (*compare)(const
 
 void swap(void *arg1, void* arg2, size_t sz_elem)
 {
-	size_t sz_type = sizeof(int64_t);
-
-	while (sz_elem != 0)
+	for (size_t i = 0; i < ((sz_elem >> 3) & 0x7); i++)
 	{
-		size_t i = 0, j = sz_elem / sz_type;
-		switch (sz_type)
-		{
-		case sizeof(int64_t):
-			while (i < j)
-			{
-				int64_t tmp = *(int64_t*)arg1;
-				*(int64_t*)arg1 = *(int64_t*)arg2;
-				*(int64_t*)arg2 = tmp;
-				arg1 = (int64_t*)arg1 + 1; 
-				arg2 = (int64_t*)arg2 + 1;
-				i++; 
-			}
-			break;		
-	
-		case sizeof(int32_t):
-			while (i < j)
-			{
-				int32_t tmp = *(int32_t*)arg1;
-				*(int32_t*)arg1 = *(int32_t*)arg2;
-				*(int32_t*)arg2 = tmp;
-				arg1 = (int32_t*)arg1 + 1; 
-				arg2 = (int32_t*)arg2 + 1; 
-				i++;
-			}
-			break;
-
-		case sizeof(int16_t):
-			while (i < j)
-			{
-				int16_t tmp = *(int16_t*)arg1;
-				*(int16_t*)arg1 = *(int16_t*)arg2;
-				*(int16_t*)arg2 = tmp;
-				arg1 = (int16_t*)arg1 + 1; 
-				arg2 = (int16_t*)arg2 + 1; 
-				i++;
-			}
-			break;
-
-		case sizeof(int8_t):
-			while (i < j)
-			{
-				int8_t tmp = *(int8_t*)arg1;
-				*(int8_t*)arg1 = *(int8_t*)arg2;
-				*(int8_t*)arg2 = tmp;
-				arg1 = (int8_t*)arg1 + 1; 
-				arg2 = (int8_t*)arg2 + 1;
-				i++; 
-			}
-			break;
-
-		default:
-			break;
-		}
-
-		sz_elem -= sz_type * j;
-		sz_type /= 2;
+		uint64_t tmp[1] = {0};
+		memcpy(tmp , arg1, sizeof(uint64_t));
+		memcpy(arg1, arg2, sizeof(uint64_t));
+		memcpy(arg2, tmp , sizeof(uint64_t));
+		arg1 = (uint64_t*)arg1 + 1;
+		arg2 = (uint64_t*)arg2 + 1;
+	}
+	if((sz_elem >> 2) & 0x1)
+	{
+		uint32_t tmp[1] = {};
+		memcpy(tmp , arg1, sizeof(uint32_t));
+		memcpy(arg1, arg2, sizeof(uint32_t));
+		memcpy(arg2, tmp , sizeof(uint32_t));
+		arg1 = (uint32_t*)arg1 + 1;
+		arg2 = (uint32_t*)arg2 + 1;
+	}
+	if((sz_elem >> 1) & 0x1)
+	{
+		uint16_t tmp[1] = {};
+		memcpy(tmp , arg1, sizeof(uint16_t));
+		memcpy(arg1, arg2, sizeof(uint16_t));
+		memcpy(arg2, tmp , sizeof(uint16_t));
+		arg1 = (uint16_t*)arg1 + 1;
+		arg2 = (uint16_t*)arg2 + 1;
+	}
+	if(sz_elem & 0x1)
+	{
+		uint8_t tmp[1] = {};
+		memcpy(tmp , arg1, sizeof(uint8_t));
+		memcpy(arg1, arg2, sizeof(uint8_t));
+		memcpy(arg2, tmp , sizeof(uint8_t));
 	}
 }

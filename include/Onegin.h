@@ -6,12 +6,12 @@
 #include <assert.h>
 #include <ctype.h>
 
-typedef struct line{
+typedef struct {
 	const char* line;
 	int length_line;
 } Line;
 
-typedef struct DATA_TEXT{
+typedef struct {
     size_t size_file;
     char* buf;
     size_t amount_lines;
@@ -24,13 +24,13 @@ enum CONFIG{
 };
 
 enum ERROR{
-	ERROR                = -1,
-	ERROR_OPEN_FILE      = -2,
-	ERROR_POINTER_NULL   = -3,
-	ERROR_READ_TEXT      = -4,
-	ERROR_UNREAL_VALUE   = -5,
-	ERROR_BORDER_MASSIVE = -6,
-	ERROR_CLOSE_FILE     = -7
+	ERROR                = 1,
+	ERROR_OPEN_FILE      = 2,
+	ERROR_POINTER_NULL   = 3,
+	ERROR_READ_TEXT      = 4,
+	ERROR_UNREAL_VALUE   = 5,
+	ERROR_BORDER_MASSIVE = 6,
+	ERROR_CLOSE_FILE     = 7
 };
 
 size_t search_size_file(FILE *fp_src, int* error_check);

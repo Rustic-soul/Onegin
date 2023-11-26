@@ -16,19 +16,19 @@ int main()
 	
 	text1.size_file = search_size_file(fp_src, &ERROR_CHECK);
 	if (ERROR_CHECK != 0)
-		exit(ERROR_CHECK);
+		return ERROR_CHECK;
 
 	text1.buf = create_buf(fp_src, &text1, &ERROR_CHECK);
 	if  (ERROR_CHECK != 0)
 	{
 		fclose(fp_src);
 		free(text1.buf);
-		exit (ERROR_CHECK);
+		return ERROR_CHECK;
 	}
 
 	if ((ERROR_CHECK = determine_number_lines(text1.buf, text1.size_file, &text1.amount_lines)) != 0)
 	{
-		exit(ERROR_CHECK);
+		return ERROR_CHECK;
 	}
 
 	text1.lines = split_lines(text1.buf, text1.size_file, text1.amount_lines, &ERROR_CHECK);
@@ -37,7 +37,7 @@ int main()
 		fclose(fp_src);
 		free(text1.buf);
 		free(text1.lines);
-		exit(ERROR_CHECK);
+		return ERROR_CHECK;
 	}
 	
 	if (sorted_text(&text1, NORMAL, FILE_NAME_OUT_1) != 0)
@@ -45,20 +45,23 @@ int main()
 		fclose(fp_src);
 		free(text1.buf);
 		free(text1.lines);
-		exit(ERROR);
+		return ERROR;
 	}
-
 	if (sorted_text(&text1, REVERSE, FILE_NAME_OUT_2) != 0)
 	{
 		fclose(fp_src);
 		free(text1.buf);
 		free(text1.lines);
-		exit(ERROR);
+		return ERROR;
 	}
 
 	fclose(fp_src);
 	free(text1.buf);
 	free(text1.lines);
 	printf("TIME: %ld\n", clock());
-}
 
+	printf("%d\n", (45 >> 3) & 0x7);
+	printf("%d\n", (45 >> 2) & 0x1);
+	printf("%d\n", (45 >> 1) & 0x1);
+	printf("%d\n", 45 & 0x1);
+}
