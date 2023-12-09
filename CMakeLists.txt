@@ -25,4 +25,7 @@ unreachable,vla-bound,vptr")
 
 include_directories(${src})
 
-add_executable(app_deb src/main.cpp src/Onegin.cpp src/myqsort.cpp)
+# src/merge_sorts.cpp
+# src/myqsort.cpp
+# src/bubble_sort.cpp
+add_executable(app_deb src/main.cpp src/Onegin.cpp src/merge_sorts.cpp)

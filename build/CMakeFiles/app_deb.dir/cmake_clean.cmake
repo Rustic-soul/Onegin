@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/app_deb.dir/src/Onegin.cpp.o.d"
   "CMakeFiles/app_deb.dir/src/main.cpp.o"
   "CMakeFiles/app_deb.dir/src/main.cpp.o.d"
-  "CMakeFiles/app_deb.dir/src/myqsort.cpp.o"
-  "CMakeFiles/app_deb.dir/src/myqsort.cpp.o.d"
+  "CMakeFiles/app_deb.dir/src/merge_sorts.cpp.o"
+  "CMakeFiles/app_deb.dir/src/merge_sorts.cpp.o.d"
   "app_deb"
   "app_deb.pdb"
 )

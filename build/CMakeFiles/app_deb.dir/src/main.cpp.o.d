@@ -1,11 +1,11 @@
 CMakeFiles/app_deb.dir/src/main.cpp.o: \
- /home/admin/GIT/Onegin/src/main.cpp /usr/include/stdc-predef.h \
- /home/admin/GIT/Onegin/src/../include/Onegin.h /usr/include/stdio.h \
- /usr/include/bits/libc-header-start.h /usr/include/features.h \
- /usr/include/features-time64.h /usr/include/bits/wordsize.h \
- /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
- /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
+ /home/admin/git_projects/Onegin/src/main.cpp /usr/include/stdc-predef.h \
+ /home/admin/git_projects/Onegin/src/../include/Onegin.h \
+ /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/lib64/gcc/x86_64-alt-linux/13/include/stddef.h \
  /usr/lib64/gcc/x86_64-alt-linux/13/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
@@ -39,7 +39,7 @@ CMakeFiles/app_deb.dir/src/main.cpp.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/c++/13/bits/std_abs.h \
  /usr/include/assert.h /usr/include/ctype.h \
- /home/admin/GIT/Onegin/src/../include/config.h /usr/include/c++/13/ctime \
- /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
- /usr/include/bits/types/struct_tm.h \
+ /home/admin/git_projects/Onegin/src/../include/config.h \
+ /usr/include/c++/13/ctime /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/bits/timex.h /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin/GIT/Onegin
+CMAKE_SOURCE_DIR = /home/admin/git_projects/Onegin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin/GIT/Onegin/build
+CMAKE_BINARY_DIR = /home/admin/git_projects/Onegin/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/GIT/Onegin/build/CMakeFiles /home/admin/GIT/Onegin/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/git_projects/Onegin/build/CMakeFiles /home/admin/git_projects/Onegin/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/GIT/Onegin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/git_projects/Onegin/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,29 +177,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/myqsort.o: src/myqsort.cpp.o
-.PHONY : src/myqsort.o
+src/merge_sorts.o: src/merge_sorts.cpp.o
+.PHONY : src/merge_sorts.o
 
 # target to build an object file
-src/myqsort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/myqsort.cpp.o
-.PHONY : src/myqsort.cpp.o
+src/merge_sorts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/merge_sorts.cpp.o
+.PHONY : src/merge_sorts.cpp.o
 
-src/myqsort.i: src/myqsort.cpp.i
-.PHONY : src/myqsort.i
+src/merge_sorts.i: src/merge_sorts.cpp.i
+.PHONY : src/merge_sorts.i
 
 # target to preprocess a source file
-src/myqsort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/myqsort.cpp.i
-.PHONY : src/myqsort.cpp.i
+src/merge_sorts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/merge_sorts.cpp.i
+.PHONY : src/merge_sorts.cpp.i
 
-src/myqsort.s: src/myqsort.cpp.s
-.PHONY : src/myqsort.s
+src/merge_sorts.s: src/merge_sorts.cpp.s
+.PHONY : src/merge_sorts.s
 
 # target to generate assembly for a file
-src/myqsort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/myqsort.cpp.s
-.PHONY : src/myqsort.cpp.s
+src/merge_sorts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app_deb.dir/build.make CMakeFiles/app_deb.dir/src/merge_sorts.cpp.s
+.PHONY : src/merge_sorts.cpp.s
 
 # Help Target
 help:
@@ -216,9 +216,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/myqsort.o"
-	@echo "... src/myqsort.i"
-	@echo "... src/myqsort.s"
+	@echo "... src/merge_sorts.o"
+	@echo "... src/merge_sorts.i"
+	@echo "... src/merge_sorts.s"
 .PHONY : help
 
 

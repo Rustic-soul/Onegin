@@ -130,8 +130,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/admin/GIT/Onegin/build",
-		"source" : "/home/admin/GIT/Onegin"
+		"build" : "/home/admin/git_projects/Onegin/build",
+		"source" : "/home/admin/git_projects/Onegin"
 	},
 	"version" : 
 	{

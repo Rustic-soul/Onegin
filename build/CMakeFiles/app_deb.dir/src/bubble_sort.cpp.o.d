@@ -1,6 +1,7 @@
 CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o: \
- /home/admin/GIT/Onegin/src/bubble_sort.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/13/stdlib.h /usr/include/c++/13/cstdlib \
+ /home/admin/git_projects/Onegin/src/bubble_sort.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/13/stdlib.h \
+ /usr/include/c++/13/cstdlib \
  /usr/include/c++/13/x86_64-alt-linux/bits/c++config.h \
  /usr/include/c++/13/x86_64-alt-linux/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -38,4 +39,5 @@ CMakeFiles/app_deb.dir/src/bubble_sort.cpp.o: \
  /usr/include/bits/stdio_lim.h \
  /usr/lib64/gcc/x86_64-alt-linux/13/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
- /usr/include/bits/stdint-uintn.h
+ /usr/include/bits/stdint-uintn.h /usr/include/string.h \
+ /usr/include/strings.h

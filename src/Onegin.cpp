@@ -162,15 +162,24 @@ int compare_reverse(const void* arg1, const void* arg2)
 
 int sorted_text(Data_t* text, int config, const char* pth)
 {
+    Line *lines = NULL;
+
 	switch (config)
 	{
 	case NORMAL:
-		my_qsort(text->lines, text->amount_lines, sizeof(Line), compare);
+        lines = (Line*)merge_sort(text->lines, text->amount_lines, sizeof(Line), compare);
+		free(text->lines);
+        text->lines = lines;
+        // my_qsort(text->lines, text->amount_lines, sizeof(Line), compare);
 		// bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare);
 		// qsort(text->lines, text->amount_lines, sizeof(Line), compare);
 		break;
+
 	case REVERSE:
-		my_qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
+        lines = (Line*)merge_sort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
+		free(text->lines);
+        text->lines = lines;
+		// my_qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		// bubble_sort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		// qsort(text->lines, text->amount_lines, sizeof(Line), compare_reverse);
 		break;

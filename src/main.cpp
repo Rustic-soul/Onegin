@@ -60,8 +60,4 @@ int main()
 	free(text1.lines);
 	printf("TIME: %ld\n", clock());
 
-	printf("%d\n", (45 >> 3) & 0x7);
-	printf("%d\n", (45 >> 2) & 0x1);
-	printf("%d\n", (45 >> 1) & 0x1);
-	printf("%d\n", 45 & 0x1);
 }

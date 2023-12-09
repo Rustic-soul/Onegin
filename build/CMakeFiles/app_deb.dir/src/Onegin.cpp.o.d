@@ -1,11 +1,12 @@
 CMakeFiles/app_deb.dir/src/Onegin.cpp.o: \
- /home/admin/GIT/Onegin/src/Onegin.cpp /usr/include/stdc-predef.h \
- /home/admin/GIT/Onegin/src/../include/Onegin.h /usr/include/stdio.h \
- /usr/include/bits/libc-header-start.h /usr/include/features.h \
- /usr/include/features-time64.h /usr/include/bits/wordsize.h \
- /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
- /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
+ /home/admin/git_projects/Onegin/src/Onegin.cpp \
+ /usr/include/stdc-predef.h \
+ /home/admin/git_projects/Onegin/src/../include/Onegin.h \
+ /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/lib64/gcc/x86_64-alt-linux/13/include/stddef.h \
  /usr/lib64/gcc/x86_64-alt-linux/13/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
